@@ -82,6 +82,8 @@ class ComAnahitaSchemaMigration19 extends ComMigratorMigrationVersion
         ."`username` varchar(255) DEFAULT NULL,"
         ."`password` varchar(255) DEFAULT NULL,"
         ."`usertype` varchar(50) DEFAULT NULL,"
+        ."`academictype` varchar(50) DEFAULT NULL,"
+        ."`corporatetype` varchar(50) DEFAULT NULL,"
         ."`gender` varchar(50) DEFAULT NULL,"
         ."`given_name` varchar(255) DEFAULT NULL,"
         ."`family_name` varchar(255) DEFAULT NULL,"
