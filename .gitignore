@@ -1,0 +1,12 @@
+.*
+!.gitignore
+composer.lock
+src/templates/shiraz/params.ini
+vendor/autoload.php
+vendor/composer/*
+vendor/dg/*
+vendor/symfony/*
+vendor/swiftmailer/*
+www/*
+node_modules/*
+.DS_Store
