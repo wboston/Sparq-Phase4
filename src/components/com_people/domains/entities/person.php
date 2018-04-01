@@ -26,6 +26,8 @@ final class ComPeopleDomainEntityPerson extends ComActorsDomainEntityActor
     * Allowed user types array
     */
     protected $_allowed_user_types;
+    protected $_allowed_academic_types;
+    protected $_allowed_corporate_types;
 
     /*
      * Mention regex pattern
