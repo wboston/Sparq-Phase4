@@ -99,7 +99,8 @@ class ComPeopleTemplateHelper extends KTemplateHelperAbstract
             $academictypes[ComPeopleDomainEntityPerson::ACADEMICTYPE_INSTRUCTOR] = AnTranslator::_('COM-PEOPLE-ACADEMICTYPE-INSTRUCTOR');
         }
         if ($viewer->superadmin() || $viewer->admin()) {
-            $academictypes[ComPeopleDomainEntityPerson::ACADEMICTYPE_INSTRUCTOR] = AnTranslator::_('COM-PEOPLE-ACADEMICTYPE-INSTRUCTOR');
+            $academictypes[ComPeopleDomainEntityPerson::ACADEMICTYPE_INSTRUCTOR] = AnTranslator::_('COM-PEOPLE-ACADEMICTYPE-NONE');
+            $academictypes[ComPeopleDomainEntityPerson::ACADEMICTYPE_NONE] = AnTranslator::_('COM-PEOPLE-ACADEMICTYPE-INSTRUCTOR');
             $academictypes[ComPeopleDomainEntityPerson::ACADEMICTYPE_ADMIN] = AnTranslator::_('COM-PEOPLE-ACADEMICTYPE-ADMIN');
         } 
 
