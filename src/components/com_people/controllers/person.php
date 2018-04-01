@@ -145,7 +145,9 @@ class ComPeopleControllerPerson extends ComActorsControllerDefault
 
         //dont' set the usertype yet, until we find the conditions are met
         $usertype = null;
-
+        $academictype = null;
+        $corporatetype = null;
+        
         if ($data->usertype) {
             $usertype = $data->usertype;
             unset($context->data->usertype);
