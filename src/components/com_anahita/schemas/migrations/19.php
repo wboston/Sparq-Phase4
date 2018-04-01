@@ -58,6 +58,8 @@ class ComAnahitaSchemaMigration19 extends ComMigratorMigrationVersion
         ."`node_id` bigint(11) NOT NULL DEFAULT 0,"
         ."`username` varchar(255) DEFAULT NULL,"
         ."`usertype` varchar(255),"
+        ."`academictype` varchar(255),"
+        ."`corporatetype` varchar(255),"
         ."`time` INT(11) DEFAULT 0,"
         ."`guest` tinyint(2) DEFAULT '1',"
         ."`meta` longtext,"
