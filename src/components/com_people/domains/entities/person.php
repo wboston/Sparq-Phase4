@@ -42,6 +42,22 @@ final class ComPeopleDomainEntityPerson extends ComActorsDomainEntityActor
     const USERTYPE_ADMINISTRATOR = 'administrator';
     const USERTYPE_SUPER_ADMINISTRATOR = 'super-administrator';
 
+    /*
+     * Sparq: Phase 4
+     * UserValues----------------- William
+     */
+    const ACADEMICTYPE_NONE="none";
+    const ACADEMICTYPE_STUDENT="student";
+    const ACADEMICTYPE_TUTOR="tutor";
+	const ACADEMICTYPE_INSTRUCTOR="instructor";
+    const ACADEMICTYPE_ADMIN="admin";
+    
+	const CORPORATETYPE_NONE="none";
+    const CORPORATETYPE_RECRUITER="recruiter";
+    const CORPORATETYPE_MANAGER="manager"; 
+    const CORPORATETYPE_COMPANY="Company";   
+
+    
     /**
      * Initializes the default configuration for the object.
      *
