@@ -57,7 +57,7 @@ final class ComPeopleDomainEntityPerson extends ComActorsDomainEntityActor
     const CORPORATETYPE_MANAGER="manager"; 
     const CORPORATETYPE_COMPANY="Company";   
 
-    
+
     /**
      * Initializes the default configuration for the object.
      *
@@ -89,6 +89,8 @@ final class ComPeopleDomainEntityPerson extends ComActorsDomainEntityActor
                     'format' => 'password'
                 ),
                 'usertype',
+                'academictype', /* Added uservalue type ------- William */
+				'corporatetype',
                 'gender',
                 'lastVisitDate' => array(
                     'default' => 'date'
