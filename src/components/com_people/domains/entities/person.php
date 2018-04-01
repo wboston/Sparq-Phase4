@@ -219,6 +219,48 @@ final class ComPeopleDomainEntityPerson extends ComActorsDomainEntityActor
         return $this->usertype === self::USERTYPE_SUPER_ADMINISTRATOR;
     }
 
+/** 
+    * Checks for sparq UserValue account types
+    * return true if the user is [blah]
+    *  @return bool
+    **/
+    // ------ Academic Types ------
+    public function student()
+    {
+        return $this->academictype === self::ACADEMICTYPE_STUENT;
+    }
+
+    public function tutor()
+    {
+        return $this->academictype === self::ACADEMICTYPE_TUTOR;
+    }
+
+    public function instructor()
+    {
+        return $this->academictype === self::ACADEMICTYPE_INSTRUCTOR;
+    }
+
+    public function academicadmin()
+    {
+        return $this->academictype === self::ACADEMICTYPE_ADMIN;
+    }
+
+    // ------ Corporate Accounts ------
+    public function recruiter()
+    {
+        return $this->corporatetype === self::CORPORATETYPE_RECRUITER;
+    }
+
+    public function manager()
+    {
+        return $this->corporatetype === self::CORPORATETYPE_MANAGER;
+    }
+
+    public function company()
+    {
+        return $this->corporatetype === self::CORPORATETYPE_COMPANY;
+    }
+
     public function visited()
     {
         $this->lastVisitDate = AnDomainAttributeDate::getInstance();
