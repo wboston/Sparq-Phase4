@@ -235,6 +235,8 @@ class ComPeopleControllerPerson extends ComActorsControllerDefault
             $person->usertype = $data->usertype;
         } else {
             $person->usertype = ComPeopleDomainEntityPerson::USERTYPE_REGISTERED;
+            $person->academictype = ComPeopleDomainEntityPerson::ACADEMICTYPE_STUDENT;
+            $person->corporatetype = ComPeopleDomainEntityPerson::CORPORATETYPE_NONE;
         }
 
         dispatch_plugin('user.onAfterAddPerson', array('person' => $person));
