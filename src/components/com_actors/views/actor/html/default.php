@@ -53,6 +53,16 @@
 		<? endif; ?>
 		</h2>
 
+		<? if (is_person($item)): ?>
+
+		<? if ($item->academicCheck()): ?>
+		<h3 id="person-academictype"></h3>
+		<? else: ?>
+		<h3 id="person-corporatetype"></h3>
+		<? endif; ?>
+		
+		<? endif; ?>
+
 		<? if (!empty($item->body)): ?>
 		<div id="actor-description">
 		<?= @helper('text.truncate', @content($item->body, array('exclude' => array('syntax', 'video'))), array('length' => 250, 'read_more' => true, 'consider_html' => true)); ?>
