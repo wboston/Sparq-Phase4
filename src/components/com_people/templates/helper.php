@@ -95,13 +95,13 @@ class ComPeopleTemplateHelper extends KTemplateHelperAbstract
             ComPeopleDomainEntityPerson::ACADEMICTYPE_STUDENT => AnTranslator::_('COM-PEOPLE-ACADEMICTYPE-STUDENT'),
             ComPeopleDomainEntityPerson::ACADEMICTYPE_TUTOR => AnTranslator::_('COM-PEOPLE-ACADEMICTYPE-TUTOR'),
         );
-        /* if ($viewer->academicadmin()) {
+        if ($viewer->academicadmin()) {
             $academictypes[ComPeopleDomainEntityPerson::ACADEMICTYPE_INSTRUCTOR] = AnTranslator::_('COM-PEOPLE-ACADEMICTYPE-INSTRUCTOR');
         }
         if ($viewer->superadmin() || $viewer->admin()) {
             $academictypes[ComPeopleDomainEntityPerson::ACADEMICTYPE_INSTRUCTOR] = AnTranslator::_('COM-PEOPLE-ACADEMICTYPE-INSTRUCTOR');
             $academictypes[ComPeopleDomainEntityPerson::ACADEMICTYPE_ADMIN] = AnTranslator::_('COM-PEOPLE-ACADEMICTYPE-ADMIN');
-        } */
+        } 
 
         $html = $this->getService('com:base.template.helper.html');
 
@@ -114,7 +114,7 @@ class ComPeopleTemplateHelper extends KTemplateHelperAbstract
         $options = new KConfig($options);
 
         $options->append(array(
-            'id' => 'person-corporateType',
+            'id' => 'person-corporatetype',
             'selected' => 'None',
             'name' => 'corporatetype',
             'class' => 'input-block-level',
@@ -131,13 +131,13 @@ class ComPeopleTemplateHelper extends KTemplateHelperAbstract
             //ComPeopleDomainEntityPerson::CORPORATETYPE_MANAGER => AnTranslator::_('COM-PEOPLE-CORPORATETYPE-MANAGER'),
         );
 
-       /*  if ($viewer->company()) {
+       if ($viewer->company()) {
             $corporatetypes[ComPeopleDomainEntityPerson::CORPORATETYPE_MANAGER] = AnTranslator::_('COM-PEOPLE-CORPORATETYPE-MANAGER');
         }
         if ($viewer->superadmin() || $viewer->admin()) {
             $corporatetypes[ComPeopleDomainEntityPerson::CORPORATETYPE_MANAGER] = AnTranslator::_('COM-PEOPLE-CORPORATETYPE-MANAGER');
             $corporatetypes[ComPeopleDomainEntityPerson::CORPORATETYPE_COMPANY] = AnTranslator::_('COM-PEOPLE-CORPORATETYPE-COMPANY');
-        } */
+        } 
 
         $html = $this->getService('com:base.template.helper.html');
 
