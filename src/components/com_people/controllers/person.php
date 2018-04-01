@@ -179,6 +179,12 @@ class ComPeopleControllerPerson extends ComActorsControllerDefault
         if (in_array($usertype, $this->_allowed_user_types) && $person->authorize('changeUsertype')) {
             $person->usertype = $usertype;
         }
+        if (in_array($academictype, $this->_allowed_academic_types) && $person->authorize('changeUsertype')) {
+            $person->academictype = $academictype;
+        }
+        if (in_array($corporatetype, $this->_allowed_corporate_types) && $person->authorize('changeUsertype')) {
+            $person->corporatetype = $corporatetype;
+        }
 
         $person->timestamp();
 
