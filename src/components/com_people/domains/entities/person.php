@@ -227,6 +227,14 @@ final class ComPeopleDomainEntityPerson extends ComActorsDomainEntityActor
     *  @return bool
     **/
     // ------ Academic Types ------
+    public function academicCheck()
+    {
+        return $this->academictype === self::ACADEMICTYPE_STUENT ||
+                $this->academictype === self::ACADEMICTYPE_TUTOR ||
+                $this->academictype === self::ACADEMICTYPE_INSTRUCTOR ||
+                $this->academictype === self::ACADEMICTYPE_ADMIN;
+                
+    }
     public function student()
     {
         return $this->academictype === self::ACADEMICTYPE_STUENT;
