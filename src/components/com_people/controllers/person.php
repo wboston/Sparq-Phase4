@@ -53,6 +53,25 @@ class ComPeopleControllerPerson extends ComActorsControllerDefault
             ComPeopleDomainEntityPerson::USERTYPE_ADMINISTRATOR,
             ComPeopleDomainEntityPerson::USERTYPE_REGISTERED,
         );
+        
+        /*
+        * Sparq: Phase 4
+        * UserValues----------------- William
+        */
+        $this->_allowed_academic_types = array(
+            ComPeopleDomainEntityPerson::ACADEMICTYPE_NONE,
+            ComPeopleDomainEntityPerson::ACADEMICTYPE_STUDENT,
+            ComPeopleDomainEntityPerson::ACADEMICTYPE_TUTOR,
+            ComPeopleDomainEntityPerson::ACADEMICTYPE_INSTRUCTOR,
+            ComPeopleDomainEntityPerson::ACADEMICTYPE_ADMIN,
+        );
+
+		$this->_allowed_corporate_types = array(
+            ComPeopleDomainEntityPerson::CORPORATETYPE_NONE,
+			ComPeopleDomainEntityPerson::CORPORATETYPE_RECRUITER,
+            ComPeopleDomainEntityPerson::CORPORATETYPE_MANAGER,
+            ComPeopleDomainEntityPerson::CORPORATETYPE_COMPANY,
+        );
 
         $viewer = get_viewer();
 
