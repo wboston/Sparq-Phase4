@@ -13,6 +13,8 @@
 class ComPeopleControllerPerson extends ComActorsControllerDefault
 {
     protected $_allowed_user_types;
+    protected $_allowed_academic_types;
+    protected $_allowed_corporate_types;
 
     /**
      * Constructor.
@@ -147,7 +149,7 @@ class ComPeopleControllerPerson extends ComActorsControllerDefault
         $usertype = null;
         $academictype = null;
         $corporatetype = null;
-        
+
         if ($data->usertype) {
             $usertype = $data->usertype;
             unset($context->data->usertype);
