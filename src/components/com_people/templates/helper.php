@@ -80,7 +80,7 @@ class ComPeopleTemplateHelper extends KTemplateHelperAbstract
 
         $options->append(array(
             'id' => 'person-academictype',
-            'selected' => 'student',
+            'selected' => 'Student',
             'name' => 'academictype',
             'class' => 'input-block-level',
         ));
@@ -114,9 +114,9 @@ class ComPeopleTemplateHelper extends KTemplateHelperAbstract
         $options = new KConfig($options);
 
         $options->append(array(
-            'id' => 'person-academicType',
-            'selected' => 'student',
-            'name' => 'academictype',
+            'id' => 'person-corporateType',
+            'selected' => 'None',
+            'name' => 'corporatetype',
             'class' => 'input-block-level',
         ));
 
