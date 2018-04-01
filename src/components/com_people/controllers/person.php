@@ -150,6 +150,14 @@ class ComPeopleControllerPerson extends ComActorsControllerDefault
             $usertype = $data->usertype;
             unset($context->data->usertype);
         }
+        if ($data->academictype) {
+            $academictype = $data->academictype;
+            unset($context->data->academictype);
+        }
+        if ($data->corporatetype) {
+            $corporatetype = $data->corporatetype;
+            unset($context->data->corporatetype);
+        }
 
         if ($data->password) {
             $_SESSION['reset_password_prompt'] = 0;
