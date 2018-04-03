@@ -26,8 +26,6 @@ final class ComPeopleDomainEntityPerson extends ComActorsDomainEntityActor
     * Allowed user types array
     */
     protected $_allowed_user_types;
-    protected $_allowed_academic_types;
-    protected $_allowed_corporate_types;
 
     /*
      * Mention regex pattern
@@ -41,21 +39,6 @@ final class ComPeopleDomainEntityPerson extends ComActorsDomainEntityActor
     const USERTYPE_REGISTERED = 'registered';
     const USERTYPE_ADMINISTRATOR = 'administrator';
     const USERTYPE_SUPER_ADMINISTRATOR = 'super-administrator';
-
-    /*
-     * Sparq: Phase 4
-     * UserValues----------------- William
-     */
-    const ACADEMICTYPE_NONE="none";
-    const ACADEMICTYPE_STUDENT="student";
-    const ACADEMICTYPE_TUTOR="tutor";
-	const ACADEMICTYPE_INSTRUCTOR="instructor";
-    const ACADEMICTYPE_ADMIN="admin";
-    
-	const CORPORATETYPE_NONE="none";
-    const CORPORATETYPE_RECRUITER="recruiter";
-    const CORPORATETYPE_MANAGER="manager"; 
-    const CORPORATETYPE_COMPANY="Company"; 
 
     /**
      * Initializes the default configuration for the object.
@@ -92,9 +75,7 @@ final class ComPeopleDomainEntityPerson extends ComActorsDomainEntityActor
                 'lastVisitDate' => array(
                     'default' => 'date'
                 ),
-                'activationCode',
-                'academictype', /* Added uservalue type ------- William */
-				'corporatetype'
+                'activationCode'
             ),
             'aliases' => array(
                 'registrationDate' => 'creationTime'
@@ -219,56 +200,6 @@ final class ComPeopleDomainEntityPerson extends ComActorsDomainEntityActor
     public function superadmin()
     {
         return $this->usertype === self::USERTYPE_SUPER_ADMINISTRATOR;
-    }
-
-/** 
-    * Checks for sparq UserValue account types
-    * return true if the user is [blah]
-    *  @return bool
-    **/
-    // ------ Academic Types ------
-    public function academicCheck()
-    {
-        return $this->academictype === self::ACADEMICTYPE_STUENT ||
-                $this->academictype === self::ACADEMICTYPE_TUTOR ||
-                $this->academictype === self::ACADEMICTYPE_INSTRUCTOR ||
-                $this->academictype === self::ACADEMICTYPE_ADMIN;
-                
-    }
-    public function student()
-    {
-        return $this->academictype === self::ACADEMICTYPE_STUENT;
-    }
-
-    public function tutor()
-    {
-        return $this->academictype === self::ACADEMICTYPE_TUTOR;
-    }
-
-    public function instructor()
-    {
-        return $this->academictype === self::ACADEMICTYPE_INSTRUCTOR;
-    }
-
-    public function academicadmin()
-    {
-        return $this->academictype === self::ACADEMICTYPE_ADMIN;
-    }
-
-    // ------ Corporate Accounts ------
-    public function recruiter()
-    {
-        return $this->corporatetype === self::CORPORATETYPE_RECRUITER;
-    }
-
-    public function manager()
-    {
-        return $this->corporatetype === self::CORPORATETYPE_MANAGER;
-    }
-
-    public function company()
-    {
-        return $this->corporatetype === self::CORPORATETYPE_COMPANY;
     }
 
     public function visited()
