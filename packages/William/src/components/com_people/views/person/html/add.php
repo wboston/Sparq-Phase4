@@ -101,7 +101,7 @@
                         <?= @text('COM-PEOPLE-USERTYPE'); ?>
                     </label>
                     <div class="controls">
-                        <?= @helper('usertypes') ?>
+                        <?= @helper('academictypes') ?>
                     </div>
                 </div>
                 <div class="control-group">
@@ -109,7 +109,7 @@
                         <?= @text('COM-PEOPLE-USERTYPE'); ?>
                     </label>
                     <div class="controls">
-                        <?= @helper('usertypes') ?>
+                        <?= @helper('corporatetypes') ?>
                     </div>
                 </div>
             </fieldset>
