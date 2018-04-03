@@ -225,6 +225,58 @@ final class ComPeopleDomainEntityPerson extends ComActorsDomainEntityActor
         $this->lastVisitDate = AnDomainAttributeDate::getInstance();
     }
 
+    /** 
+    * Checks for sparq UserValue account types
+    * return true if the user is [blah]
+    *  @return bool
+    **/
+    // ------ Academic Types ------
+    public function academicCheck()
+    {
+        return $this->academictype === self::ACADEMICTYPE_STUENT ||
+                $this->academictype === self::ACADEMICTYPE_TUTOR ||
+                $this->academictype === self::ACADEMICTYPE_INSTRUCTOR ||
+                $this->academictype === self::ACADEMICTYPE_ADMIN;
+                
+    }
+    public function student()
+    {
+        return $this->academictype === self::ACADEMICTYPE_STUENT;
+    }
+
+    public function tutor()
+    {
+        return $this->academictype === self::ACADEMICTYPE_TUTOR;
+    }
+
+    public function instructor()
+    {
+        return $this->academictype === self::ACADEMICTYPE_INSTRUCTOR;
+    }
+
+    public function academicadmin()
+    {
+        return $this->academictype === self::ACADEMICTYPE_ADMIN;
+    }
+
+    // ------ Corporate Accounts ------
+    public function recruiter()
+    {
+        return $this->corporatetype === self::CORPORATETYPE_RECRUITER;
+    }
+
+    public function manager()
+    {
+        return $this->corporatetype === self::CORPORATETYPE_MANAGER;
+    }
+
+    public function company()
+    {
+        return $this->corporatetype === self::CORPORATETYPE_COMPANY;
+    }
+
+
+
     /**
      * Automatically sets the activation token for the user.
      *
