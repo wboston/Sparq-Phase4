@@ -13,6 +13,8 @@
 class ComPeopleControllerPerson extends ComActorsControllerDefault
 {
     protected $_allowed_user_types;
+    protected $_allowed_academic_types;
+    protected $_allowed_corporate_types;
 
     /**
      * Constructor.
@@ -52,6 +54,25 @@ class ComPeopleControllerPerson extends ComActorsControllerDefault
         $this->_allowed_user_types = array(
             ComPeopleDomainEntityPerson::USERTYPE_ADMINISTRATOR,
             ComPeopleDomainEntityPerson::USERTYPE_REGISTERED,
+        );
+        
+        /*
+        * Sparq: Phase 4
+        * UserValues----------------- William
+        */
+        $this->_allowed_academic_types = array(
+            ComPeopleDomainEntityPerson::ACADEMICTYPE_NONE,
+            ComPeopleDomainEntityPerson::ACADEMICTYPE_STUDENT,
+            ComPeopleDomainEntityPerson::ACADEMICTYPE_TUTOR,
+            ComPeopleDomainEntityPerson::ACADEMICTYPE_INSTRUCTOR,
+            ComPeopleDomainEntityPerson::ACADEMICTYPE_ADMIN,
+        );
+
+		$this->_allowed_corporate_types = array(
+            ComPeopleDomainEntityPerson::CORPORATETYPE_NONE,
+			ComPeopleDomainEntityPerson::CORPORATETYPE_RECRUITER,
+            ComPeopleDomainEntityPerson::CORPORATETYPE_MANAGER,
+            ComPeopleDomainEntityPerson::CORPORATETYPE_COMPANY,
         );
 
         $viewer = get_viewer();
@@ -126,10 +147,20 @@ class ComPeopleControllerPerson extends ComActorsControllerDefault
 
         //dont' set the usertype yet, until we find the conditions are met
         $usertype = null;
+        $academictype = null;
+        $corporatetype = null;
 
         if ($data->usertype) {
             $usertype = $data->usertype;
             unset($context->data->usertype);
+        }
+        if ($data->academictype) {
+            $academictype = $data->academictype;
+            unset($context->data->academictype);
+        }
+        if ($data->corporatetype) {
+            $corporatetype = $data->corporatetype;
+            unset($context->data->corporatetype);
         }
 
         if ($data->password) {
@@ -151,6 +182,12 @@ class ComPeopleControllerPerson extends ComActorsControllerDefault
         //now check to see if usertype can be set, otherwise the value is unchanged
         if (in_array($usertype, $this->_allowed_user_types) && $person->authorize('changeUsertype')) {
             $person->usertype = $usertype;
+        }
+        if (in_array($academictype, $this->_allowed_academic_types) && $person->authorize('changeUsertype')) {
+            $person->academictype = $academictype;
+        }
+        if (in_array($corporatetype, $this->_allowed_corporate_types) && $person->authorize('changeUsertype')) {
+            $person->corporatetype = $corporatetype;
         }
 
         $person->timestamp();
@@ -202,6 +239,8 @@ class ComPeopleControllerPerson extends ComActorsControllerDefault
             $person->usertype = $data->usertype;
         } else {
             $person->usertype = ComPeopleDomainEntityPerson::USERTYPE_REGISTERED;
+            $person->academictype = ComPeopleDomainEntityPerson::ACADEMICTYPE_STUDENT;
+            $person->corporatetype = ComPeopleDomainEntityPerson::CORPORATETYPE_NONE;
         }
 
         dispatch_plugin('user.onAfterAddPerson', array('person' => $person));
