@@ -76,6 +76,24 @@
             <?= @helper('usertypes', array('selected' => $item->usertype)) ?>
         </div>
     </div>
+
+	<div class="control-group">
+        <label class="control-label" for="person-academic">
+            <?= @text('COM-PEOPLE-ACADEMICTYPE'); ?>
+        </label>
+        <div class="controls">
+            <?= @helper('academictypes', array('selected' => $item->academictype)) ?>
+        </div>
+    </div>
+				
+	<div class="control-group">
+        <label class="control-label" for="person-corporate">
+            <?= @text('COM-PEOPLE-CORPORATETYPE'); ?>
+        </label>
+        <div class="controls">
+            <?= @helper('corporatetypes', array('selected' => $item->corporatetype)) ?>
+        </div>
+    </div>
     <? endif; ?>
 
 	<? foreach ($profile as $header => $fields)  : ?>
