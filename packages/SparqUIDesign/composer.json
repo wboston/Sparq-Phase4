@@ -1,6 +1,6 @@
 {
     "type": "anahita-extension",
-    "name": "anahita/topics",
+    "name": "anahita/sparqui",
     "keywords" : ["anahita extension"],
     "description": "",
     "extension-source" : "src",
