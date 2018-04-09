@@ -1,5 +1,5 @@
 {
-    "name": "Sparq",
+    "name": "SparqUIDesign",
     "description": "Sparq UI Featrues including color and images",
     "version": "4.3.0",
     "homepage": "https://www.sparqedu.com",
@@ -23,11 +23,8 @@
               {
                   "value": "style1",
                   "text": "Style 1"
-              },
-              {
-                  "value": "style2",
-                  "text": "Custom"
               }
+              
           ],
           "name": "cssStyle",
           "type": "list",

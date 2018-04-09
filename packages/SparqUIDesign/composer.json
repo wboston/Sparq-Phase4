@@ -1,6 +1,6 @@
 {
     "type": "anahita-extension",
-    "name": "anahita/sparqui",
+    "name": "anahita/sparquidesign",
     "keywords" : ["anahita extension"],
     "description": "",
     "extension-source" : "src",
