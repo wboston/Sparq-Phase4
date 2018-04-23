@@ -6,11 +6,11 @@
 <div class="row">
 	<div class="span8 offset2">
 		<div class="hero-unit text-center">
-			<img src="https://it0vza.ch.files.1drv.com/y4mKf84uJsjS5qhHf7pfaPuKkvAmmpxTVk7KfmdEJPNExRhpsQipqim71Vp_hIvdEbvl211SxyCEC82kVanM3EdFZjV3ZaAmrW8FY3-Oi2yBuTwsS_ktHWOzqvm8halKz1Bo9ABhIOzqRI9aoIsLxVN5z-vPxMH4IaE1JAbOFpoOJxUYJkOwgb5S6-JmcAqJS5eTdz-oRihMVS2DLezp9UIFA?width=2706&height=1717&cropmode=none" alt="Anahita social networking platform and framework" />
+			<img src="https://it0vza.ch.files.1drv.com/y4m6FW7rFRk-G4Be9-_D4rAm0PGJODcq32Lm03sH6HF2TDptbmFj2afydEH-L-3IkaiaNZWDK6kgowNZ6G0N-DFt-5hPaQkjTLRO3sw3jbAq1HYaExES9rkp28ExKdnI1KlS9hWDEVbUnPg-CD_UzVZUAb4kzW3FvFUa1HAAihZtTtGYZodTWEpbICJQ1K7mOHtYDejV_tPKVObtwHM6_G-9g?width=2706&height=1717&cropmode=none" alt="SparqEdu Logo, connecting students" />
 
-			<h1>Anahita</h1>
+			<h1>sparqEdu</h1>
 
-			<p class="lead">open source social networking platform</p>
+			<p class="lead">Inspiration Powered by Connection</p>
 
 			<p>
 				<a class="btn btn-primary" href="https://www.GetAnahita.com" target="_blank">
